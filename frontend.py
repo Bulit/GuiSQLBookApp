@@ -11,8 +11,8 @@ Update entry
 Delete entry
 Close app
 """
-from cgitb import text
 from tkinter import *
+import backend
 
 window = Tk()
 
