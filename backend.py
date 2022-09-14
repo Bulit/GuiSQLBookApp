@@ -47,5 +47,5 @@ def update(id, title, author, year, isbn):
 connect()
 #insert("Ziemiomorze", "Ursula K. Le Guin", 2012, 9788378396659)
 # delete(2)
-print(view())
-print(search("Widmowy Jack"))
+# print(view())
+# print(search("Widmowy Jack"))
