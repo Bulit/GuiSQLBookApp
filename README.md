@@ -4,6 +4,3 @@
 
 ### TechStack:
 :snake: Python (Tkinter), SQLite
-
-@TODO
-- searching by non-complete criteria. ex. instead of looking for Earthsea, we can type sea. The app should search for all items meeting the specified criteria.
