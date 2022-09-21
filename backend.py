@@ -18,7 +18,27 @@ class Database:
         return rows
 
     def search(self, title="", author="", year="", isbn=""):
-        self.cur.execute("SELECT * FROM book WHERE title=? OR author=? OR year=? OR isbn=?", (title, author, year, isbn))
+        if title == "":
+            mtitle = title
+        else:
+            mtitle = '%' + title + '%'
+        if author == "":
+            mauthor = author
+        else:
+            mauthor =  '%' + author + '%'
+        if year == "":
+            myear = year
+        else:
+            myear =  '%' + year + '%'
+        if title == "":
+            mtitle = title
+        else:
+            mtitle = '%' + title + '%'
+        if isbn == "":
+            misbn = isbn
+        else:
+            misbn =  '%' + isbn + '%'
+        self.cur.execute("SELECT * FROM book WHERE title LIKE ? OR author LIKE ? OR year LIKE ? OR isbn LIKE ?", (mtitle, mauthor, myear, misbn))
         rows=self.cur.fetchall()
         return rows
 
@@ -32,4 +52,3 @@ class Database:
 
     def __del__(self):
         self.conn.close()
-
